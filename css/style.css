@@ -1,0 +1,180 @@
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Page */
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Arial, sans-serif;
+
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+}
+
+/* Calculator */
+.calculator {
+    width: 360px;
+    padding: 20px;
+
+    background: #111827;
+    border-radius: 24px;
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+/* Display */
+.display {
+    min-height: 120px;
+    padding: 20px;
+
+    margin-bottom: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    background: #020617;
+    border-radius: 18px;
+
+    overflow: hidden;
+}
+
+.previous-operand {
+    min-height: 25px;
+    color: #94a3b8;
+    font-size: 18px;
+}
+
+.current-operand {
+    color: white;
+    font-size: 42px;
+    font-weight: 600;
+
+    word-break: break-all;
+}
+
+/* Buttons Grid */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+/* All Buttons */
+button {
+    height: 65px;
+
+    border: none;
+    border-radius: 16px;
+
+    font-size: 22px;
+    font-weight: 600;
+
+    color: white;
+    background: #1e293b;
+
+    cursor: pointer;
+
+    transition: 0.15s ease;
+}
+
+/* Hover */
+button:hover {
+    background: #334155;
+    transform: translateY(-2px);
+}
+
+/* Click */
+button:active {
+    transform: scale(0.95);
+}
+
+/* Number Buttons */
+.number {
+    background: #1e293b;
+}
+
+/* Operators */
+.operator {
+    background: #334155;
+}
+
+/* Equal */
+.equals {
+    background: #2563eb;
+}
+
+.equals:hover {
+    background: #3b82f6;
+}
+
+/* Clear */
+.clear {
+    background: #dc2626;
+}
+
+.clear:hover {
+    background: #ef4444;
+}
+
+/* Delete */
+.delete {
+    background: #475569;
+}
+
+/* Two-column button */
+.span-two {
+    grid-column: span 2;
+}
+
+/* Responsive */
+@media (max-width: 400px) {
+
+    .calculator {
+        width: 92%;
+        padding: 15px;
+    }
+
+    button {
+        height: 58px;
+        font-size: 20px;
+    }
+
+    .current-operand {
+        font-size: 34px;
+    }
+}
+
+
+
+/* Brand Name */
+.brand {
+    text-align: center;
+    margin-bottom: 18px;
+    letter-spacing: 2px;
+}
+
+.brand span {
+    display: block;
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.brand small {
+    display: block;
+    margin-top: 2px;
+    color: #60a5fa;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
